@@ -1,5 +1,9 @@
 /**
- * Created by doetken on 24.05.2016.
+ * Created by doetken on 01.06.2016.
  */
-public class Fregatte implements Schiffe {
+public class Fregatte extends Schiffstyp {
+    int laenge=4;
+    Fregatte(){
+
+    }
 }
