@@ -13,6 +13,10 @@ public interface Schiffe {
 //        Bei 0: "Ich bin versenkt worden
     }
 
+    public void schiffSetzen(){
+
+    }
+
     public void verschieben(int xUm, int yUm) {
 
     }
