@@ -11,7 +11,7 @@ public abstract class Schiffstyp implements Schiffe {
     int[] xKoord = new int[4];
     int[] yKoord = new int[4];
 
-
+//Testtext
     public Schiffstyp(String typBezeichnung, String richtung, int xKoordinate1, int yKoordinate1) {
         this.richtung = richtung;
         this.xKoordinate1 = xKoordinate1;
