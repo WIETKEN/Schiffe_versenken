@@ -30,6 +30,10 @@ public abstract class Schiffstyp implements Schiffe {
         }
     }
 
+    public Schiffstyp() {
+
+    }
+
     @Override
     public void richtungFestlegen(String richtung) {
         this.richtung = richtung;

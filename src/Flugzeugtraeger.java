@@ -3,5 +3,9 @@
  */
 public class Flugzeugtraeger extends Schiffstyp {
     int laenge = 5;
-    Flugzeugtraeger();
+
+    Flugzeugtraeger() {
+        super();
+
+    }
 }

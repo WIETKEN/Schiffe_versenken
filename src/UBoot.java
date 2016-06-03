@@ -3,5 +3,5 @@
  */
 public class UBoot extends Schiffstyp {
  int laenger = 3;
-    UBoot();
+
 }
