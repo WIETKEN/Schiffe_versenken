@@ -34,22 +34,22 @@ public abstract class Schiffstyp implements Schiffe {
 
     }
 
-    @Override
-    public void richtungFestlegen(String richtung) {
-        this.richtung = richtung;
-    }
+//    @Override
+//    public void richtungFestlegen(String richtung) {
+//        this.richtung = richtung;
+//    }
+//
+//    @Override
+//    public void trefferEintragen() {
+//
+//    }
+//
+//    @Override
+//    public void schiffSetzen() {
+//
+//    }
 
-    @Override
-    public void trefferEintragen() {
-
-    }
-
-    @Override
-    public void schiffSetzen() {
-
-    }
-
-    @Override
+  //  @Override
     public void verschieben(int xUm, int yUm) {
         if (richtung == "horizontal") {
             for (int i = 0; i < xKoord.length; i++) {
