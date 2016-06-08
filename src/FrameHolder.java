@@ -55,7 +55,7 @@ public class FrameHolder {
     }
 
     public static JButton[][] initButtons(JButton[][] Barray, boolean cpu)
-	/*
+    /*
 	 * die Buttons n�her bestimmt: Am Anfang hat jeder Button das Bild "water" und die Gr��e 40*40 Pixel
 	 */ {
         for (int i = 0; i <= 9; i++) {
@@ -121,7 +121,7 @@ public class FrameHolder {
     }
 
     public static ImageIcon loadImage(String name) {
-        return new ImageIcon(name + ".jpg");
+        return new ImageIcon(name +".jpg");
     }
 }
 
