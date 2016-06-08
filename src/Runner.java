@@ -5,6 +5,7 @@ public class Runner {
     public static void main(String[] args) {
         new Audioabspielen().musik();
         new FrameHolder();
+        new Highscoreeingabeaufforderung();
     }
 
 

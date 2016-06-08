@@ -6,13 +6,13 @@ import javax.swing.*;
 public class Highscore {
 
     //    todo  Umsetzung mit XML!!
-    JTextField nachname=new JTextField();
-    JTextField vorname= new JTextField();
-    String nachnamenString = "";
-    String vornamenString = "";
-    int zeit = 500;
-    int fehlschuesse = 500;
-    int punkte = 0;
+    private JTextField nachname = new JTextField();
+    private JTextField vorname = new JTextField();
+    private String nachnamenString = "";
+    private String vornamenString = "";
+    private int zeit = 500;
+    private int fehlschuesse = 500;
+    private int punkte = 0;
 
     public void einlesen() {
 
@@ -26,7 +26,8 @@ public class Highscore {
         einlesen();
         this.vornamenString = vorname.getText();
         this.nachnamenString = nachname.getText();
-        punkteBerechnen(this.zeit, this.fehlschuesse);
+        this.punkte = punkteBerechnen(this.zeit, this.fehlschuesse);
+        System.out.println("Highscoretest:" + this.vornamenString + ", "+this.nachnamenString + ", " + punkte);
     }
 
     private void punkteBerechnen(int zeit, int fehlschuesse) {
