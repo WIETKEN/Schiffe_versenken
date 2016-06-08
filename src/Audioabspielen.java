@@ -2,6 +2,7 @@
  * Created by cwiegers on 08.06.2016.
  */
 
+import javax.sound.sampled.Clip;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.net.MalformedURLException;
@@ -14,21 +15,14 @@ public class Audioabspielen {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                // URL vom Lied
                 URL url = null;
-               // try {
-                  //  url = new URL("file:///D:/start.wav");
-                    url = this.getClass().getResource("start.wav");
-               // } catch (MalformedURLException e) {
-               //     e.printStackTrace();
-                //    return;
-              //  }
-
+                url = this.getClass().getResource("start.wav");
                 //neues AudioClip element
                 AudioClip clip = Applet.newAudioClip(url);
 
                 //abspielen
-                clip.play();
+                clip.loop();
+                //clip.play();
                 try {
                     Thread.sleep(50000);
                 } catch (InterruptedException e) {
