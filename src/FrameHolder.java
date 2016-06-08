@@ -1,10 +1,22 @@
+import javax.sound.sampled.*;
 import javax.swing.*;
+import java.applet.Applet;
+import java.applet.AudioClip;
 import java.awt.*;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import static javax.sound.sampled.AudioSystem.getAudioInputStream;
+import static javax.sound.sampled.AudioSystem.getClip;
+import static javax.sound.sampled.AudioSystem.getLine;
 
 /**
  * Created by cwiegers on 01.06.2016.
  */
 public class FrameHolder {
+
+
 
     public JPanel mypanel = new JPanel(),
             cpupanel = new JPanel(),
@@ -56,7 +68,7 @@ public class FrameHolder {
 
     public static JButton[][] initButtons(JButton[][] Barray, boolean cpu)
     /*
-	 * die Buttons n�her bestimmt: Am Anfang hat jeder Button das Bild "water" und die Gr��e 40*40 Pixel
+     * die Buttons n�her bestimmt: Am Anfang hat jeder Button das Bild "water" und die Gr��e 40*40 Pixel
 	 */ {
         for (int i = 0; i <= 9; i++) {
             for (int j = 0; j <= 9; j++) {
@@ -121,7 +133,30 @@ public class FrameHolder {
     }
 
     public static ImageIcon loadImage(String name) {
-        return new ImageIcon(name +".jpg");
+        return new ImageIcon(name + ".jpg");
     }
+
+    public void abspielen() {
+        // URL vom Lied
+        URL url = null;
+        try {
+            url = new URL("file:///D:/start.wav");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        //neues AudioClip element
+        AudioClip clip = Applet.newAudioClip(url);
+
+        //abspielen
+        clip.play();
+        try {
+            Thread.sleep(600000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
