@@ -3,8 +3,9 @@
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        new Audioabspielen();
-        new FrameHolder();
+       new Audioabspielen().musik();
+       new FrameHolder();
     }
+
 
 }
